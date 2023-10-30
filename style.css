@@ -3,6 +3,7 @@
   margin:0;
   padding:0;
 
+
 }
 #header {
   width: 100%;
@@ -29,6 +30,7 @@ letter-spacing: 5px;
   width: 100%;
   height: 100vh;
   z-index:1;
+  background-repeat: repeat;
 }
 #first img, #second img, #third img {
   border: 2px solid white;
@@ -37,16 +39,16 @@ letter-spacing: 5px;
   height: 500px;
   width: 350px;
   position: relative;
-  top: 20px;
-  left:62px;
+  /*top: 20px;
+  left:62px;*/
 
 }
 #second img, #second {
   height: 500px;
   width: 350px;
   position: relative;
-  left:242px;
-  bottom:230px;
+  /*left:242px;
+  bottom:230px;*/
 
 
 }
@@ -54,25 +56,77 @@ letter-spacing: 5px;
   height: 500px;
   width: 350px;
   position: relative;
-  left:422px;
-  bottom: 480px;
+  /*left:422px;
+  bottom: 480px;*/
 }
 #third img:hover {
   height: 600px;
   width: 450px;
-  bottom:530px;
+  bottom:50px;
 }
 #second img:hover {
   height: 600px;
   width: 450px;
-  bottom: 280px;
+  bottom:50px;
   z-index: 100;
-  left: 192px;
+  right: 50px;
 }
 #first img:hover {
   height: 600px;
   width: 450px;
   z-index: 100;
-  left:-38px;
-  top:-30px
+  bottom:50px;
+  right: 100px;
+}
+.gridclass {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: 500px;
+  column-gap: 10px;
+  justify-content: center;
+  position: relative;
+  top: 30px;
+
+}
+@media only screen and (max-width: 1124px){
+  .gridclass{
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    grid-row-gap: 20px;
+  }
+  #first img:hover {
+    right:50px;
+
+  }
+  #third img:hover {
+    right:50px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .gridclass {
+    grid-template-columns: repeat(3, auto);
+
+  }
+  #first img, #first, #second img, #second, #third img, #third {
+    height: 650px;
+    width: 500px;
+  }
+  #third img:hover{
+    height: 725px;
+    width: 575px;
+    top:-35px;
+  }
+  #second img:hover {
+    height: 725px;
+    width: 575px;
+    top:-35px;
+    z-index: 100;
+  }
+  #first img:hover {
+    height: 725px;
+    width: 575px;
+    top:-35px;
+    right:75px;
+
+  }
 }
